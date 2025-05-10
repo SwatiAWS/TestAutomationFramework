@@ -18,6 +18,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MyFirstTest extends BaseTest {
 
+		
 //	@Test(dataProvider="testData")
 	@Test(dataProviderClass = readXLSdata.class, dataProvider="testDataTab")
 	public static void loginTest(String userName, String passWord) throws InterruptedException {
@@ -37,6 +38,8 @@ public class MyFirstTest extends BaseTest {
 		driver.findElement(By.xpath(locators.getProperty("password_Field"))).sendKeys(passWord);
 		driver.findElement(By.xpath(locators.getProperty("login_nextButton"))).click();
 		Thread.sleep(4000);
+		
+		System.out.println("Demo text");
 		 
 	}
 	
